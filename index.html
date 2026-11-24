@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABHIVERSE TECHFEST — Where Bright Minds Collide</title>
+<meta name="description" content="ABHIVERSE TECHFEST — a concept edition of a national technology festival. March 2027, online with a grand finale in India.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050816'/%3E%3Cpath d='M16 5 L27 26 H21.5 L16 14.5 L10.5 26 H5 Z' fill='%2322d3ee'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.js" } }
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="#top" aria-label="Abhiverse Techfest — back to top">
+    <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0a0f24"/><path d="M16 5 L27 26 H21.5 L16 14.5 L10.5 26 H5 Z" fill="#22d3ee"/></svg>
+    <span>ABHIVERSE&nbsp;<em>TECHFEST</em></span>
+  </a>
+  <nav class="site-nav" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#competitions">Competitions</a>
+    <a href="#prizes">Prizes</a>
+    <a href="#timeline">Timeline</a>
+  </nav>
+  <a class="btn btn-small btn-glow" href="#register">Register</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="kicker reveal-line"><span>A CONCEPT EDITION · MARCH 2027</span></p>
+      <h1 class="hero-title" aria-label="Where bright minds collide and create">
+        <span class="reveal-line"><span>WHERE BRIGHT MINDS</span></span>
+        <span class="reveal-line"><span class="grad-text">COLLIDE &amp; CREATE</span></span>
+      </h1>
+      <p class="hero-lede">One month of building beneath a neon sky — forty arenas of code,
+        circuits and flight, gathered from every corner of the country, until only
+        the boldest ideas are left standing.</p>
+      <p class="hero-dates">March 2027 · Online rounds + Grand finale in India</p>
+
+      <div class="countdown" role="timer" aria-label="Countdown to 1 March 2027">
+        <div class="cd-cell"><span class="cd-num" id="cdDays">--</span><span class="cd-lab">Days</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdHours">--</span><span class="cd-lab">Hours</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdMins">--</span><span class="cd-lab">Minutes</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdSecs">--</span><span class="cd-lab">Seconds</span></div>
+      </div>
+      <p class="cd-note" id="cdNote">until the gates open on 1 March 2027</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-glow" href="#register">Register now</a>
+        <a class="btn btn-ghost" href="#competitions">Explore competitions</a>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#about" aria-label="Scroll down to About">
+      <span class="scroll-hint-line"></span>Scroll
+    </a>
+  </section>
+
+  <!-- ============ ABOUT / STATS ============ -->
+  <section class="section" id="about">
+    <p class="kicker reveal">THE FESTIVAL</p>
+    <h2 class="section-title reveal">A month where the campus<br>becomes a <span class="grad-text">launchpad</span></h2>
+    <p class="section-lede reveal">By day, workshops and war-rooms. By night, build sprints under
+      open skies. ABHIVERSE TECHFEST is imagined as the festival students plan their year around —
+      part contest, part carnival, entirely unforgettable.</p>
+
+    <div class="stats">
+      <article class="stat-card reveal">
+        <span class="stat-num" data-count="1000000" data-format="inr">₹0</span>
+        <span class="stat-lab">Prize pool and counting</span>
+      </article>
+      <article class="stat-card reveal">
+        <span class="stat-num" data-count="40" data-format="plus">0</span>
+        <span class="stat-lab">Competitions across six arenas</span>
+      </article>
+      <article class="stat-card reveal">
+        <span class="stat-num" data-count="50000" data-format="plus">0</span>
+        <span class="stat-lab">Participants from every state</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ COMPETITIONS ============ -->
+  <section class="section" id="competitions">
+    <p class="kicker reveal">THE ARENAS</p>
+    <h2 class="section-title reveal">Choose your <span class="grad-text">battleground</span></h2>
+    <p class="section-lede reveal">Six flagship competitions headline the edition. Filter by the
+      craft you love — every card leads straight to the register desk.</p>
+
+    <div class="filters reveal" role="group" aria-label="Filter competitions">
+      <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="ai">AI</button>
+      <button type="button" class="filter-btn" data-filter="hardware">Hardware</button>
+      <button type="button" class="filter-btn" data-filter="code">Code</button>
+    </div>
+
+    <div class="cards" id="compGrid">
+      <article class="comp-card tilt reveal" data-cat="ai">
+        <p class="comp-tag">Artificial Intelligence</p>
+        <h3>Agentic AI</h3>
+        <p>Build an agent that does not merely answer — it acts. Give it a real
+          problem, a budget of tools, and watch it reason its way home.</p>
+        <div class="comp-meta"><span class="comp-prize">₹2,00,000</span><span>Team of 1–4</span></div>
+        <button type="button" class="btn btn-card" data-comp="Agentic AI">Register interest</button>
+      </article>
+
+      <article class="comp-card tilt reveal" data-cat="code">
+        <p class="comp-tag">Marathon Build</p>
+        <h3>Hackathon 24H</h3>
+        <p>One day, one problem statement, no sleep worth mentioning. Ship a
+          working product before the clock runs out — demos, not promises.</p>
+        <div class="comp-meta"><span class="comp-prize">₹1,75,000</span><span>Team of 2–4</span></div>
+        <button type="button" class="btn btn-card" data-comp="Hackathon 24H">Register interest</button>
+      </article>
+
+      <article class="comp-card tilt reveal" data-cat="hardware">
+        <p class="comp-tag">Robotics</p>
+        <h3>Robotics</h3>
+        <p>Metal, motors and nerve. Your machine crosses the arena, reads the
+          course, and finishes the task whilst others are still calibrating.</p>
+        <div class="comp-meta"><span class="comp-prize">₹1,50,000</span><span>Team of 2–5</span></div>
+        <button type="button" class="btn btn-card" data-comp="Robotics">Register interest</button>
+      </article>
+
+      <article class="comp-card tilt reveal" data-cat="hardware">
+        <p class="comp-tag">Aerial Racing</p>
+        <h3>Drone Racing</h3>
+        <p>Gates at full throttle. Thread a glowing course against the clock —
+          the steadiest hand and the bravest line take the purse.</p>
+        <div class="comp-meta"><span class="comp-prize">₹1,25,000</span><span>Solo pilots</span></div>
+        <button type="button" class="btn btn-card" data-comp="Drone Racing">Register interest</button>
+      </article>
+
+      <article class="comp-card tilt reveal" data-cat="code">
+        <p class="comp-tag">Algorithms</p>
+        <h3>Coding Clash</h3>
+        <p>Three hours, ten problems, one leaderboard that never sits still.
+          Pure speed of thought, judged by the cold arithmetic of the clock.</p>
+        <div class="comp-meta"><span class="comp-prize">₹1,00,000</span><span>Solo</span></div>
+        <button type="button" class="btn btn-card" data-comp="Coding Clash">Register interest</button>
+      </article>
+
+      <article class="comp-card tilt reveal" data-cat="code">
+        <p class="comp-tag">Design · Front-end</p>
+        <h3>Design-a-thon</h3>
+        <p>Beauty under deadline. Redesign a beloved product in a day — judged
+          on taste, clarity, and whether a stranger understands it at a glance.</p>
+        <div class="comp-meta"><span class="comp-prize">₹75,000</span><span>Team of 1–3</span></div>
+        <button type="button" class="btn btn-card" data-comp="Design-a-thon">Register interest</button>
+      </article>
+    </div>
+    <p class="filter-note" id="filterNote" aria-live="polite">Showing all 6 flagship competitions</p>
+  </section>
+
+  <!-- ============ PRIZES ============ -->
+  <section class="section" id="prizes">
+    <p class="kicker reveal">THE PODIUM</p>
+    <h2 class="section-title reveal">Glory, weighed in <span class="grad-text">gold</span></h2>
+    <p class="section-lede reveal">The overall champions of the edition climb the podium on the
+      final night — over and above what each arena pays its own winners.</p>
+
+    <div class="podium">
+      <article class="podium-step podium-2 reveal">
+        <span class="podium-medal">2</span>
+        <h3>Runner-up</h3>
+        <p class="podium-prize">₹3,00,000</p>
+        <p>The silver standard — one breath from the crown.</p>
+        <span class="podium-base base-2" aria-hidden="true"></span>
+      </article>
+      <article class="podium-step podium-1 reveal">
+        <span class="podium-medal medal-1">1</span>
+        <h3>Champion</h3>
+        <p class="podium-prize">₹5,00,000</p>
+        <p>The name the next edition will be measured against.</p>
+        <span class="podium-base base-1" aria-hidden="true"></span>
+      </article>
+      <article class="podium-step podium-3 reveal">
+        <span class="podium-medal">3</span>
+        <h3>Second Runner-up</h3>
+        <p class="podium-prize">₹2,00,000</p>
+        <p>Bronze today. A warning to everyone next year.</p>
+        <span class="podium-base base-3" aria-hidden="true"></span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="section" id="timeline">
+    <p class="kicker reveal">THE ROAD</p>
+    <h2 class="section-title reveal">From first click<br>to <span class="grad-text">final night</span></h2>
+
+    <ol class="timeline">
+      <li class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-date">January 2027</p>
+        <h3>Registrations open</h3>
+        <p>The gates swing wide. Pick your arena, name your team, and pin the
+          dates to the wall — places in the flagship events are finite.</p>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-date">February 2027</p>
+        <h3>Round 1 — online</h3>
+        <p>Problem statements drop at dawn. Builds, races and clashes run online,
+          judged on working proof — never on promises.</p>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-date">Late February 2027</p>
+        <h3>The shortlist</h3>
+        <p>The leaderboard settles. The finest teams from every arena receive
+          the call — pack your bags, the finale is on home soil.</p>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-date">March 2027</p>
+        <h3>The grand finale — India</h3>
+        <p>Two days on the ground: final builds, live races, the champions'
+          podium, and a closing night nobody forgets in a hurry.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ REGISTER ============ -->
+  <section class="section" id="register">
+    <p class="kicker reveal">THE REGISTER DESK</p>
+    <h2 class="section-title reveal">Put your name<br>on the <span class="grad-text">list</span></h2>
+    <p class="section-lede reveal">Thirty seconds now, a story for the rest of the year.
+      Tell us who you are and where you mean to compete.</p>
+
+    <div class="register-wrap reveal">
+      <form id="regForm" novalidate>
+        <div class="field">
+          <label for="regName">Full name</label>
+          <input type="text" id="regName" name="name" autocomplete="name" placeholder="e.g. Aarav Sharma">
+          <p class="field-error" id="errName" hidden>Please tell us your name (at least 2 characters).</p>
+        </div>
+        <div class="field">
+          <label for="regEmail">Email address</label>
+          <input type="email" id="regEmail" name="email" autocomplete="email" placeholder="you@example.com">
+          <p class="field-error" id="errEmail" hidden>That email does not look right — check it and try again.</p>
+        </div>
+        <div class="field">
+          <label for="regComp">Competition</label>
+          <select id="regComp" name="competition">
+            <option value="">Choose your arena…</option>
+            <option>Agentic AI</option>
+            <option>Hackathon 24H</option>
+            <option>Robotics</option>
+            <option>Drone Racing</option>
+            <option>Coding Clash</option>
+            <option>Design-a-thon</option>
+          </select>
+          <p class="field-error" id="errComp" hidden>Pick the competition you want to enter.</p>
+        </div>
+        <button type="submit" class="btn btn-glow btn-wide">Register</button>
+        <p class="reg-count" id="regCount" aria-live="polite"></p>
+      </form>
+
+      <div class="reg-success" id="regSuccess" hidden>
+        <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="none" stroke="#22d3ee" stroke-width="3"/><path d="M16 28 L24 36 L39 19" fill="none" stroke="#a78bfa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>You are on the list.</h3>
+        <p id="successText">Welcome to the edition.</p>
+        <button type="button" class="btn btn-ghost" id="regAgain">Register another participant</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <a class="brand" href="#top">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0a0f24"/><path d="M16 5 L27 26 H21.5 L16 14.5 L10.5 26 H5 Z" fill="#22d3ee"/></svg>
+      <span>ABHIVERSE&nbsp;<em>TECHFEST</em></span>
+    </a>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#prizes">Prizes</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#register">Register</a>
+    </nav>
+    <p class="foot-line">A design concept inspired by India's great tech fests.</p>
+    <p class="foot-small">ABHIVERSE TECHFEST · Concept Edition · March 2027 · Online + Finale in India</p>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
